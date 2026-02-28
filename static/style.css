@@ -1,40 +1,17 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f9;
-    text-align: center;
+body.bg-gradient {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
 }
 
-h1 {
-    color: #333;
+.card {
+    border-radius: 15px;
 }
 
-a {
-    display: inline-block;
-    margin: 15px;
-    padding: 10px 20px;
-    background-color: #007bff;
+table th {
+    background-color: #343a40;
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
 }
 
-a:hover {
-    background-color: #0056b3;
-}
-
-form {
-    margin-top: 20px;
-}
-
-input {
-    padding: 8px;
-    margin: 5px;
-}
-
-button {
-    padding: 8px 15px;
-    background-color: green;
-    color: white;
-    border: none;
-    border-radius: 5px;
+.btn {
+    border-radius: 8px;
 }

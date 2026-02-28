@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Add Student</title>
-</head>
-<body>
-    <h2>Add Student</h2>
+{% extends "base.html" %}
+{% block content %}
 
-    <form method="POST">
-        Roll No: <input type="text" name="roll"><br><br>
-        Name: <input type="text" name="name"><br><br>
-        Marks: <input type="text" name="marks"><br><br>
-        <button type="submit">Add</button>
-    </form>
+<div class="card p-4 shadow">
+<h3>Add Student</h3>
+<form method="POST">
+    <input type="number" name="roll" placeholder="Roll No" class="form-control mb-3" required>
+    <input type="text" name="name" placeholder="Name" class="form-control mb-3" required>
+    <input type="number" step="0.01" name="marks" placeholder="Marks" class="form-control mb-3" required>
+    <button class="btn btn-primary">Save</button>
+</form>
+</div>
 
-    <br>
-    <a href="/">Back to Home</a>
-</body>
-</html>
+{% endblock %}
