@@ -32,7 +32,8 @@ def init_db():
     # Create default admin if not exists
     c.execute("SELECT * FROM users WHERE username = ?", ("admin",))
     if not c.fetchone():
-        hashed = generate_password_hash("admin123")
+        hashed = generate_password_hash("admin123", method='pbkdf2:sha256')
+
         c.execute("INSERT INTO users (username, password) VALUES (?,?)",
                   ("admin", hashed))
 
